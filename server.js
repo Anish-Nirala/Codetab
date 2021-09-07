@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: true }))
 
 const Code = require('./models/Code')
 const mongoose = require('mongoose')
-mongoose.connect("mongodb://localhost/codebin", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/codebin", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
 })
