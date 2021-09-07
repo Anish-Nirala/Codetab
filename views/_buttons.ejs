@@ -1,0 +1,12 @@
+<div class="buttons-wrapper">
+    <a href="/" class="logo">CodeTab</a>
+    <div class="buttons">
+        <a href="/code" class="btn" id="new"></a>
+        <% if (locals.canSave) { %>
+            <button class="btn" type="submit" id="save"></button>
+            <% } %>
+                <% if (locals.id !=null) { %>
+                    <a href="/edit/<%= locals.id %>" class="btn" id="edit"></a>
+                    <% } %>
+    </div>
+</div>
